@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+"""Module qui affiche un triangle de Pascal"""
+
 
 def pascal_triangle(n):
-    """Module qui affiche un triangle de Pascal"""
     row = [i]
     new_row = []
     for i in range(len(new_row)):

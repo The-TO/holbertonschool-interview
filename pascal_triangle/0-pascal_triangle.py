@@ -3,6 +3,7 @@
 
 
 def pascal_triangle(n):
+    """Algo pour le triangle de Pascale"""
     row = [i]
     new_row = []
     for i in range(len(new_row)):

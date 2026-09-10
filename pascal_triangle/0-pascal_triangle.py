@@ -4,12 +4,21 @@
 
 def pascal_triangle(n):
     """Algo pour le triangle de Pascale"""
-    row = [i]
-    new_row = []
-    for i in range(len(new_row)):
-        if i == 0:
-            new_row[i] = 1
-        elif i == len(new_row)-1:
-            new_row[i] =1
-        else:
-            new_row[i] = row[i] + row[i-1]
+    row = []
+    row.append([1])
+    row.append([1, 1])
+    prevlist = 1
+    while n-2 != 0:
+        index = 0 
+        new_row = []
+        new_row.append(1)
+        for _ in row[prevlist]:
+            try:
+                new_row.append(row[prevlist][index]+ row[prevlist][index+1])
+            except IndexError:
+                pass
+            index += 1
+        new_row.append(1)
+        row.append(new_row)
+        prevlist += 1
+        n -= 1

@@ -23,6 +23,3 @@ def pascal_triangle(n):
         prevlist += 1
         n -= 1
     return row
-
-for row in pascal_triangle(15):
-        print("[{}]".format(",".join([str(x) for x in row])))

@@ -10,7 +10,7 @@ def pascal_triangle(n):
     elif n == 1:
         row.append([1])
         return row
-    elif n ==2:
+    elif n == 2:
         row.append([1])
         row.append([1, 1])
         return row
@@ -18,14 +18,14 @@ def pascal_triangle(n):
     else:
         row.append([1])
         row.append([1, 1])
-        prevlist = 1
+        pvlt = 1
         while n-2 != 0:
-            index = 0 
+            index = 0
             new_row = []
             new_row.append(1)
-            for _ in row[prevlist]:
+            for _ in row[pvlt]:
                 try:
-                    new_row.append(row[prevlist][index]+ row[prevlist][index+1])
+                    new_row.append(row[pvlt][index] + row[pvlt][index + 1])
                 except IndexError:
                     pass
                 index += 1

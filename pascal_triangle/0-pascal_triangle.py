@@ -31,6 +31,6 @@ def pascal_triangle(n):
                 index += 1
             new_row.append(1)
             row.append(new_row)
-            prevlist += 1
+            pvlt += 1
             n -= 1
         return row

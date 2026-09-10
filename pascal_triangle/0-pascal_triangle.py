@@ -5,8 +5,6 @@
 def pascal_triangle(n):
     """Algo pour le triangle de Pascale"""
     row = []
-    if n <= 0:
-         return row
     row.append([1])
     row.append([1, 1])
     prevlist = 1

@@ -7,9 +7,14 @@ def pascal_triangle(n):
     row = []
     if n <= 0:
         return row
-    elif n <= 2:
+    elif n == 1:
+        row.append([1])
+        return row
+    elif n ==2:
         row.append([1])
         row.append([1, 1])
+        return row
+
     else:
         row.append([1])
         row.append([1, 1])

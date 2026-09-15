@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""fichier permettant de determiner si toutes les boites peuvent etres ouvertes"""
+"""fichier permettant de determiner si toutes les boites,
+peuvent etres ouvertes"""
+
 
 def canUnlockAll(boxes):
     n = len(boxes)
@@ -7,11 +9,11 @@ def canUnlockAll(boxes):
     unlocked = {0}
 
     keys = list(boxes[0])
-    
+
     while keys:
         current_key = keys.pop()
         if current_key < n and current_key not in unlocked:
-            unlocked.add (current_key)
-            keys.extend (boxes[current_key])
+            unlocked.add(current_key)
+            keys.extend(boxes[current_key])
 
     return len(unlocked) == n

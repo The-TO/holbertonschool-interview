@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module qui affiche un minimum d'opération pour réaliser une tache"""
 
+
 def minOperations(n):
     if n <= 1:
         return 0

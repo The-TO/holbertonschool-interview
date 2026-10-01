@@ -5,7 +5,7 @@ import sys
 
 
 def print_stats(total_size, status_counts):
-    print(f"file size: {total_size}")
+    print(f"File size: {total_size}")
 
 
     for code in sorted(status_counts.keys()):

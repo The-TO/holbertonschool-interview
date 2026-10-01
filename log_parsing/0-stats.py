@@ -29,6 +29,7 @@ def main():
             parts = line.split()
             try:
                 file_size = int(parts[-1])
+                total_size += file_size
                 status_code = parts[-2]
                 if status_code in status_counts:
                     status_counts[status_code] += 1

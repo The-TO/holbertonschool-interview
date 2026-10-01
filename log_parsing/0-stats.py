@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Une phrase qui décrit ce que fait le script."""
 
 import sys
 

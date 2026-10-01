@@ -1,23 +1,25 @@
 #!/usr/bin/python3
-"""Une phrase qui décrit ce que fait le script."""
+"""Reads log lines from stdin and prints file size and status code stats."""
 
 import sys
 
 
 def print_stats(total_size, status_counts):
-    print(f"File size: {total_size}")
-
+    """Print the total file size and the count of each status code."""
+    print("File size: {}".format(total_size))
 
     for code in sorted(status_counts.keys()):
         if status_counts[code] > 0:
-            print(f"{code}: {status_counts[code]}")
+            print("{}: {}".format(code, status_counts[code]))
 
 
 def main():
+    """Parse stdin line by line and print stats every 10 lines."""
     total_size = 0
 
     status_counts = {
-        "200": 0, "301": 0, "400": 0, "401": 0, "403": 0, "404": 0, "405": 0, "500": 0
+        "200": 0, "301": 0, "400": 0, "401": 0,
+        "403": 0, "404": 0, "405": 0, "500": 0
     }
 
     line_count = 0
@@ -43,8 +45,7 @@ def main():
         print_stats(total_size, status_counts)
         raise
 
-    if line_count % 10 != 0:
-        print_stats(total_size, status_counts)
+    print_stats(total_size, status_counts)
 
 
 if __name__ == "__main__":

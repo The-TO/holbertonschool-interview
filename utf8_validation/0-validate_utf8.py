@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+"""Module pour verifier l'necodage utf-8"""
+
+
+def validUTF8(data):
+    """fonction mermettant la verif"""
+    remaining = 0
+
+    for d in data:
+        byte = d & 0xff
+
+        if remaining == 0:
+            if byte >> 7 == 0b0:
+                continue
+            elif byte >> 5 == 0b110:
+                remaining = 1
+            elif byte >> 4 == 0b1110:
+                remaining = 2
+            elif byte >> 3 == 0b1110:
+                remaining = 3
+        else:
+            if byte >> 6 != 0b10:
+                return False
+            remaining -= 1
+
+    return remaining == 0

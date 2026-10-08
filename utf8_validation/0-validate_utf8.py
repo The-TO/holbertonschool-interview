@@ -16,7 +16,7 @@ def validUTF8(data):
                 remaining = 1
             elif byte >> 4 == 0b1110:
                 remaining = 2
-            elif byte >> 3 == 0b1110:
+            elif byte >> 3 == 0b11110:
                 remaining = 3
         else:
             if byte >> 6 != 0b10:

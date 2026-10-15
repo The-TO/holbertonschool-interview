@@ -48,7 +48,3 @@ if __name__ == "__main__":
         sys.exit(1)
     N = int(sys.argv[1])
     solve_nqueens(0, N, [])
-
-
-
-    

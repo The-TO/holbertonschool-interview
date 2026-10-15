@@ -39,7 +39,7 @@ def solve_nqueens(row, n, board):
             board.pop()
 
 if __name__ == "__main__":
-    if n_not_valid:
+    if n_not_valid():
         sys.exit(1)
     N = int(sys.argv[1])
     solve_nqueens(0, N, [])

@@ -13,7 +13,8 @@ def n_not_valid():
         return True
     if N < 4:
         print("N musqt be at least 4")
-        return False
+        return True
+    return False
 
 def is_safe(board, current_row, current_col):
     for queen in board:
@@ -22,7 +23,7 @@ def is_safe(board, current_row, current_col):
 
         if queen_col == current_col:
             return False
-        if abs(queen_row - current_row) == (queen_col - current_col):
+        if abs(queen_row - current_row) == abs(queen_col - current_col):
             return False
     return True
 

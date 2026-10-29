@@ -6,6 +6,7 @@ Détermine le nombre minimum de pièces nécessaires
 pour atteindre un montant total donné.
 """
 
+
 def makeChange(coins, total):
     """
     Calcule le nombre minimum de pièces pour atteindre `total`.
@@ -29,14 +30,9 @@ def makeChange(coins, total):
     coins_count = 0
 
     for coin in coins:
-        if total <= 0:
-            break
         coin_count += total // coin
         total = total % coin
         if total <= 0:
             return coin_count
 
-        if total != 0:
-            return -1
-
-        return coin_count
+    return -1

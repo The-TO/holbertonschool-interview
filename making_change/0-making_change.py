@@ -27,7 +27,7 @@ def makeChange(coins, total):
 
     coins.sort(reverse=True)
 
-    coins_count = 0
+    coin_count = 0
 
     for coin in coins:
         coin_count += total // coin

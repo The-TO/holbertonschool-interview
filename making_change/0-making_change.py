@@ -1,7 +1,25 @@
 #!/usr/bin/python3
+"""
+Module 0-making_change.
+
+Détermine le nombre minimum de pièces nécessaires
+pour atteindre un montant total donné.
+"""
 
 def makeChange(coins, total):
-    """Module render num of coin"""
+    """
+    Calcule le nombre minimum de pièces pour atteindre `total`.
+
+    Args:
+        coins (list of int): valeurs des pièces disponibles
+            (quantité illimitée de chaque pièce).
+        total (int): montant à atteindre.
+
+    Returns:
+        int: le nombre minimum de pièces,
+             0 si total <= 0,
+             -1 si le total ne peut pas être atteint.
+    """
 
     if total <= 0:
         return 0
